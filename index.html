@@ -516,14 +516,14 @@
 				<!-- carousel -->
 				<div class="col-12">
 					<div class="section__caarousel splide splide--content">
-						<div class="splide__arrows">
+						<!-- <div class="splide__arrows">
 							<button class="splide__arrow splide__arrow--prev" type="button">
 								<i class="ti ti-chevron-left"></i>
 							</button>
 							<button class="splide__arrow splide__arrow--next" type="button">
 								<i class="ti ti-chevron-right"></i>
 							</button>
-						</div>
+						</div> -->
 
 						<div class="splide__track">
 							<ul class="splide__list">
@@ -557,39 +557,57 @@
 								  </div>
 								</div>
 							  </li>
-							  <li class="splide__slide">
-								<div class="item item--carousel">
-								  <div class="item__cover">
-									<div class="video-gallery">
-									  <div class="video-item">
-										<video controls autoplay muted>
-										  <source src="img/new-images/v-3.mp4"  type="video/mp4">
-										  <!-- Fallback for unsupported formats -->
-										  Your browser does not support the video tag.
-										</video>
-									  </div>
-									</div>
-								  </div>
-								</div>
-							  </li>
-							  <li class="splide__slide">
-								<div class="item item--carousel">
-								  <div class="item__cover">
-									<div class="video-gallery">
-									  <div class="video-item">
-										<video controls autoplay muted>
-										  <source src="img/new-images/v-4.mp4"  type="video/mp4">
-										  <!-- Fallback for unsupported formats -->
-										  Your browser does not support the video tag.
-										</video>
-									  </div>
-									</div>
-								  </div>
-								</div>
-							  </li>
+							  
 							</ul>
 						  </div>
 						  
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="section__caarousel splide splide--content">
+						<!-- <div class="splide__arrows">
+							<button class="splide__arrow splide__arrow--prev" type="button">
+								<i class="ti ti-chevron-left"></i>
+							</button>
+							<button class="splide__arrow splide__arrow--next" type="button">
+								<i class="ti ti-chevron-right"></i>
+							</button>
+						</div> -->
+
+						<div class="splide__track">
+							<ul class="splide__list">
+								<li class="splide__slide">
+									<div class="item item--carousel">
+									  <div class="item__cover">
+										<div class="video-gallery">
+										  <div class="video-item">
+											<video controls autoplay muted>
+											  <source src="img/new-images/v-3.mp4"  type="video/mp4">
+											  <!-- Fallback for unsupported formats -->
+											  Your browser does not support the video tag.
+											</video>
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </li>
+								  <li class="splide__slide">
+									<div class="item item--carousel">
+									  <div class="item__cover">
+										<div class="video-gallery">
+										  <div class="video-item">
+											<video controls autoplay muted>
+											  <source src="img/new-images/v-4.mp4"  type="video/mp4">
+											  <!-- Fallback for unsupported formats -->
+											  Your browser does not support the video tag.
+											</video>
+										  </div>
+										</div>
+									  </div>
+									</div>
+								  </li>	
+							</ul>
+						</div>
 					</div>
 				</div>
 				<!-- end carousel -->
@@ -597,27 +615,21 @@
 		</div>
 	</section>
 	<!-- end section -->
+	 <style>
+		@media (max-width: 375px) {
+  .splide__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
+      gap: 16px; /* Adjust the gap between videos */
+  }
 
-	
-<!-- Add this script -->
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Get all video elements
-    const videos = document.querySelectorAll('.video-player');
-    
-    videos.forEach(video => {
-      // Add event listener for play event
-      video.addEventListener('play', function() {
-        // Pause all other videos when one video is played
-        videos.forEach(otherVideo => {
-          if (otherVideo !== video) {
-            otherVideo.pause();
-          }
-        });
-      });
-    });
-  });
-</script>
+  .splide__slide {
+      width: 100%;
+  }
+}
+
+	 </style>
+
 
   
 
@@ -625,7 +637,7 @@
 
 	
 	     <!-- marquee -->
-         <article class="main-container__marquee">
+         <!-- <article class="main-container__marquee">
             <div class="main-container__marquee-track">
                 <div class="main-container__marquee-items">
                     <span class="main-container__marquee-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, distinctio laboriosam sit excepturi maxime veritatis, quam quas unde voluptatum explicabo sequi nam dolorem ipsum delectus id impedit ab exercitationem porro? consectetur adipisicing elit</span>
@@ -638,7 +650,7 @@
                     <span class="main-container__marquee-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit</span>
                 </div>
             </div>
-        </article>
+        </article> -->
        
          <!-- end marquee -->
 

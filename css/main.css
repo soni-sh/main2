@@ -71,7 +71,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
   font-weight: 400;
   /* background-color: #1a191f; */
-  background: url('../../banner-one.png');
+  background: url('../../main/banner-one.png');
   background-size: cover; /* Ensures the image covers the entire viewport */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -193,18 +193,10 @@ marquee
   position: relative;
   width: 100vw;
   max-width: 100%;
-  /* min-height: 1rem; */
   overflow-x: hidden;
-  /* font-family: "Merriweather", serif; */
-  /* text-transform: uppercase; */
-  color: #111;
-  /* font-size: 18px; */
-  /* color: rgba(255, 255, 255, 1); */
   background-color: #fff;
-  /* background: radial-gradient(circle, #075726, #f9aa00a8, #0a71b1, #861908, #69700a); */
   margin: 10px 0 0;
-  filter: blur(1px);
-  
+  filter: blur(.5px);
 }
 
 .main-container__marquee-track {
@@ -212,11 +204,9 @@ marquee
   gap: 20px;
   white-space: nowrap;
   position: relative;
-  display: flex;
   overflow: hidden;
   user-select: none;
-  /* border: 1px solid #e0c77a; */
-  border-left:none ;
+  border-left: none;
   border-right: none;
 }
 
@@ -236,17 +226,48 @@ marquee
   font-size: 22px;
   width: auto;
   transition: all 0.1s ease-in-out;
-  padding:3px 0;
+  padding: 3px 0;
 }
 
 @keyframes marquee {
   from {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   to {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
+
+/* ======================== 
+Responsive Marquee
+==========================*/
+
+@media (max-width: 1200px) {
+  .main-container__marquee-item {
+    font-size: 20px;  /* Slightly smaller font for larger screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .main-container__marquee-item {
+    font-size: 18px;  /* Smaller font size for tablets and below */
+    padding: 2px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container__marquee-item {
+    font-size: 16px;  /* Adjust font size for smaller screens like phones */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container__marquee-item {
+    font-size: 10px;  /* Even smaller font for very small screens */
+    padding: 1px 0;
+  }
+}
+
 /*==============================
 	Header
 ==============================*/
@@ -1229,6 +1250,7 @@ marquee
   border-radius: 4px;
   background: #f9ab00;
 }
+
 
 /* ==========================
 paragraph

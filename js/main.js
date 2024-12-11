@@ -128,15 +128,14 @@
 			}
 		}).mount();
 	}
-	
 	if (document.querySelector('.section__caarousel')) {
 		var elms = document.getElementsByClassName('section__caarousel');
 	
 		for (var i = 0; i < elms.length; i++) {
 			new Splide(elms[i], {
 				type: 'loop',
-				perPage: 3,
-				drag: true,
+				perPage: 4,
+				drag: false,
 				pagination: false,
 				autoWidth: false,
 				autoHeight: false,
@@ -144,7 +143,7 @@
 				gap: 24,
 				arrows: false,
 				focus: 0,
-				autoplay: true,         // Enable autoplay
+				autoplay: false,         // Enable autoplay
 				interval: 1000,         // Set autoplay interval
 				breakpoints: {
 					575: {
@@ -162,6 +161,11 @@
 					1199: {
 						arrows: false,
 						perPage: 4,
+					},
+					375: {
+						arrows: false,
+						perPage: 2,  // Show 2 videos per row
+						// Custom layout changes can be added for small screen
 					},
 				}
 			}).mount();
@@ -183,7 +187,7 @@
 				gap: 24,
 				arrows: false,
 				focus: 0,
-				autoplay: true,         // Enable autoplay
+				autoplay: false,         // Enable autoplay
 				interval: 1000,         // Set autoplay interval
 				breakpoints: {
 					575: {
@@ -222,7 +226,7 @@
 				gap: 30,
 				arrows: false,
 				focus: 0,
-				autoplay: true,         // Enable autoplay
+				autoplay: false,         // Enable autoplay
 				interval: 3000,         // Set autoplay interval
 				breakpoints: {
 					767: {
